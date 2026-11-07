@@ -1,21 +1,15 @@
 # WHERE IS IT: Digital File System Investigator
 
-```text
-  _       ____  __________  ______   _________   ________
- | |     / / / / / ____/ / / / ____/  /  _/ ___/  /  _/_  __/
- | | /| / / /_/ / __/ / /_/ / __/     / / \__ \   / /  / /   
- | |/ |/ / __  / /___/ _, _/ /___   _/ / ___/ / _/ /  / /    
- |__/|__/_/ /_/_____/_/ |_/_____/  /___//____/ /___/ /_/     
-=========================================================
-      WHERE IS IT - DIGITAL FILE SYSTEM INVESTIGATOR
- Windows File System Investigation & Forensic Triage Utility
-=========================================================
-```
+<div align="center">
+
+![Where Is It Terminal Interface](screenshots/terminal_preview.png)
 
 [![Language: Bash](https://img.shields.io/badge/Language-Bash%204.0%2B-blue.svg)](https://www.gnu.org/software/bash/)
 [![Environment: Git Bash / Windows](https://img.shields.io/badge/Platform-Windows%20%7C%20Git%20Bash-orange.svg)](https://gitforwindows.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
 [![Safety: Read Only](https://img.shields.io/badge/Safety-Read--Only%20Default-success.svg)](#11-safety--reliability-guarantees)
+
+</div>
 
 ---
 
