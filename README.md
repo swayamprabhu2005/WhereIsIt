@@ -1,20 +1,21 @@
-# WHERE IS IT: Standalone Digital File System Investigator
+# WHERE IS IT: Digital File System Investigator
 
-```
-  __      ___  _                          _____      _____ _   
-  \ \    / / || |___ _ _ ___   __ _  _   |_   _|___ |_   _| |  
-   \ \/\/ /| __ / -_) '_/ -_) / _` || |    | | (_-<   | | |_|  
-    \_/\_/ |_||_\___|_| \___| \__,_||_|    |_| /__/   |_| (_)  
-========================================================================
-  WHERE IS IT v1.0.0 - Digital File System Investigator
-  Windows File System Investigation & Forensic Triage Utility (Git Bash)
-========================================================================
+```text
+  _       ____  __________  ______   _________   ________
+ | |     / / / / / ____/ / / / ____/  /  _/ ___/  /  _/_  __/
+ | | /| / / /_/ / __/ / /_/ / __/     / / \__ \   / /  / /   
+ | |/ |/ / __  / /___/ _, _/ /___   _/ / ___/ / _/ /  / /    
+ |__/|__/_/ /_/_____/_/ |_/_____/  /___//____/ /___/ /_/     
+=========================================================
+      WHERE IS IT - DIGITAL FILE SYSTEM INVESTIGATOR
+ Windows File System Investigation & Forensic Triage Utility
+=========================================================
 ```
 
 [![Language: Bash](https://img.shields.io/badge/Language-Bash%204.0%2B-blue.svg)](https://www.gnu.org/software/bash/)
 [![Environment: Git Bash / Windows](https://img.shields.io/badge/Platform-Windows%20%7C%20Git%20Bash-orange.svg)](https://gitforwindows.org/)
 [![License: MIT](https://img.shields.io/badge/License-MIT-green.svg)](LICENSE)
-[![Safety: Read Only](https://img.shields.io/badge/Safety-Read--Only%20Default-success.svg)](#6-safety--reliability-guarantees)
+[![Safety: Read Only](https://img.shields.io/badge/Safety-Read--Only%20Default-success.svg)](#11-safety--reliability-guarantees)
 
 ---
 
@@ -101,42 +102,38 @@ Moreover, discovering a filename matching `"Chrome"` or `"Report"` in a casual d
 
 ## 6. System Architecture
 
-```
+```text
 WhereIsIt/
-│
-├── src/
-│   ├── main.sh            # Application entry point, interactive menu, CLI flags
-│   ├── utils.sh           # ANSI formatting, path conversion, human formatters
-│   ├── settings.sh        # Preference storage, configuration menu, default drives
-│   ├── scanner.sh         # Drive discovery, safe find traversal, error logging
-│   ├── search.sh          # Search engine, result ranking, interactive results table
-│   ├── filters.sh         # Multi-attribute advanced search builder
-│   ├── inspector.sh       # File metadata inspector, suspicious file heuristics
-│   ├── duplicates.sh      # Two-phase duplicate detector & waste calculator
-│   ├── application.sh     # Application footprint explorer & category classifier
-│   ├── indexer.sh         # Local filesystem index creation, search & metrics
-│   ├── history.sh         # Search history persistence & re-execution
-│   ├── bookmarks.sh       # Investigation bookmark manager with notes
-│   ├── timeline.sh        # Chronological timeline & recent activity tracker
-│   ├── comparison.sh      # Filesystem snapshot capture & differential comparison
-│   └── reporter.sh        # RFC 4180 CSV & TXT report exporter
-│
-├── data/                  # Runtime session data (git-ignored)
-│   ├── settings.conf      # Persistent user settings
-│   ├── history.tsv        # Investigation search log
-│   ├── bookmarks.tsv      # Saved bookmarks
-│   └── snapshots/         # Captured state snapshots
-│
-├── reports/               # Generated TXT & CSV investigation reports
-├── index/                 # Local filesystem index database (fs_index.db)
-├── backups/               # Backup storage directory
-├── tests/
-│   └── test_search.sh     # Comprehensive automated test suite
-├── screenshots/           # Application screenshots
-├── run.bat                # Windows batch launcher (auto-locates Git Bash)
-├── README.md              # Project documentation
-├── LICENSE                # MIT License
-└── .gitignore             # Git repository rules
+|-- src/
+|   |-- main.sh            # Application entry point, interactive menu, CLI flags
+|   |-- utils.sh           # ANSI formatting, path conversion, human formatters
+|   |-- settings.sh        # Preference storage, configuration menu, default drives
+|   |-- scanner.sh         # Drive discovery, safe find traversal, error logging
+|   |-- search.sh          # Search engine, result ranking, interactive results table
+|   |-- filters.sh         # Multi-attribute advanced search builder
+|   |-- inspector.sh       # File metadata inspector, suspicious file heuristics
+|   |-- duplicates.sh      # Two-phase duplicate detector & waste calculator
+|   |-- application.sh     # Application footprint explorer & category classifier
+|   |-- indexer.sh         # Local filesystem index creation, search & metrics
+|   |-- history.sh         # Search history persistence & re-execution
+|   |-- bookmarks.sh       # Investigation bookmark manager with notes
+|   |-- timeline.sh        # Chronological timeline & recent activity tracker
+|   |-- comparison.sh      # Filesystem snapshot capture & differential comparison
+|   \-- reporter.sh        # RFC 4180 CSV & TXT report exporter
+|
+|-- data/                  # Runtime session data (git-ignored)
+|   \-- .gitkeep
+|
+|-- reports/               # Generated TXT & CSV investigation reports (git-ignored)
+|   \-- .gitkeep
+|
+|-- tests/
+|   \-- test_search.sh     # Comprehensive automated test suite
+|
+|-- run.bat                # Windows batch launcher (auto-locates Git Bash)
+|-- README.md              # Project documentation
+|-- LICENSE                # MIT License
+\-- .gitignore             # Git repository rules
 ```
 
 ---
@@ -153,7 +150,7 @@ WhereIsIt/
 Clone the repository or download the source code:
 
 ```bash
-git clone https://github.com/your-username/WhereIsIt.git
+git clone https://github.com/swayamprabhu2005/WhereIsIt.git
 cd WhereIsIt
 ```
 
@@ -209,10 +206,10 @@ bash src/main.sh --help
 ### 1. Interactive Menu Navigation
 
 ```text
-========================================
-             WHERE IS IT
-       DIGITAL FILE INVESTIGATOR
-========================================
+========================================================================
+                              WHERE IS IT
+                       DIGITAL FILE INVESTIGATOR
+========================================================================
 
   1. Search Files
   2. Search Folders
@@ -235,13 +232,16 @@ Select an option:
 ### 2. Multi-Drive Search Results with Ranking
 
 ```text
-Summary: 4 matching items found (3 files, 1 folders) in 1 second(s).
+========================================================================
+                 INVESTIGATION RESULTS: 'report'
+========================================================================
+Summary: 3 matching items found (3 files, 0 folders) in 1 second(s).
 ------------------------------------------------------------------------
-No.   Type  Rank   Size       Modified Date        Discovered Path
+No.   Type   Rank   Size       Modified Date        Discovered Path
 ------------------------------------------------------------------------
 1     [FILE] EX-FILE 1.45 MB   2026-11-05 14:22:10  C:\Documents\report.pdf
 2     [FILE] P-Match 1.45 MB   2026-11-06 09:15:00  D:\Backups\report-copy.pdf
-3     [DIR]  P-Match ---       2026-11-04 18:30:12  C:\Reports\Archive
+3     [FILE] P-Match 24.5 KB   2026-11-07 10:00:00  D:\Work\Annual Summary Report 2026.docx
 ------------------------------------------------------------------------
 Available Actions:
   [1-500] Inspect Metadata of item number
@@ -255,7 +255,9 @@ Available Actions:
 ### 3. Deep Metadata Inspection
 
 ```text
-=== FILE SYSTEM METADATA INSPECTOR ===
+========================================================================
+                    FILE SYSTEM METADATA INSPECTOR
+========================================================================
   Target Name:           invoice.pdf.exe
   Windows Path:          C:\Users\User\AppData\Local\Temp\invoice.pdf.exe
   POSIX Path:            /c/Users/User/AppData/Local/Temp/invoice.pdf.exe
@@ -281,6 +283,16 @@ Available Actions:
 ### 4. Duplicate File Detection
 
 ```text
+========================================================================
+                    DUPLICATE INVESTIGATION SUMMARY
+========================================================================
+Investigation Metrics:
+  * Scanned Files:               1,248
+  * Duplicate Clusters:          1
+  * Total Redundant Files:       3
+  * Potential Reclaimable Space: 28.40 MB (29779968 bytes)
+  * Investigation Time:          2 second(s)
+------------------------------------------------------------------------
 DUPLICATE GROUP 1
 File Size: 14.20 MB (14889984 bytes) | Copies: 3 | Redundant Waste: 28.40 MB
 SHA-256: 7f83b1657ff1fc53b92dc18148a1d65dfc2d4b1fa3d677284addd200126d9069
