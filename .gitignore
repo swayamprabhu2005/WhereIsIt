@@ -1,0 +1,32 @@
+# Where Is It - Git Ignore Rules
+
+# Temporary and runtime session data
+data/*
+!data/.gitkeep
+
+# Exclude generated reports
+reports/*
+!reports/.gitkeep
+
+# Exclude local search index databases
+index/*
+!index/.gitkeep
+
+# Exclude investigation snapshots
+data/snapshots/*
+!data/snapshots/.gitkeep
+
+# Exclude backup caches
+backups/*
+!backups/.gitkeep
+
+# Exclude simulated testing directory
+test-drive/
+
+# System and editor files
+.DS_Store
+Thumbs.db
+*.swp
+*~
+.vscode/
+.idea/
